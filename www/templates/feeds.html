@@ -1,0 +1,16 @@
+<ion-view id="feeds-container" view-title="Feeds">
+  <ion-content>
+    <ion-list ng-repeat="feed in feeds" class="feed" ng-class="{'visible': feed.visible}">
+    	<div class="feed-header {{feed.cssClass}}" ng-click="toggleFeed($event, feed)">
+	      	<i ng-if="feed.icon" class="fa-2x feed-icon fa fa-{{feed.icon}}"></i>
+	      	<h1 class="feed-name" ng-bind-html="feed.name"></h1>
+      	</div>
+		<div class="subfeed" ng-repeat="subfeed in feed.subfeeds">
+			<ion-toggle ng-model="subfeed.on" toggle-class="toggle-balanced">
+				<i class="subfeed-icon fa-lg fa fa-{{subfeed.icon}}"></i>
+	  			<p class="subfeed-name"> {{ subfeed.name }} </p>
+			</ion-toggle>
+		</div>
+    </ion-list>
+  </ion-content>
+</ion-view>

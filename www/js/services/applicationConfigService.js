@@ -2,7 +2,7 @@ angular.module('coo')
     .constant('ApplicationConfigService', function () {
 
         var config = {
-            apiURL: '',
+            apiURL: '//localhost:9000/api/v1/',
         };
 
         function get(key) {

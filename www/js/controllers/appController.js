@@ -1,6 +1,5 @@
 angular.module('coo')
-
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, ApiService) {
+.controller('AppController', function($scope, $ionicModal, $timeout, ApiService) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -32,17 +31,3 @@ angular.module('coo')
     }, 1000);
   };
 })
-
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});

@@ -21,3 +21,73 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+#coo-app {
+	// header
+	.bar-stable {
+		.coo-logo {
+			height: 100%;
+		    margin: auto;
+		}
+	}
+
+
+	// feeds
+	#feeds-container {
+		.feed {
+			.subfeed {
+				height: 0;
+				transition: height 0.3s ease-in;
+			}
+
+			&.visible {
+				.subfeed {
+			    	height: 55px;
+				}
+			}
+
+			.feed-header {
+				cursor: pointer;
+				text-align: center;
+			}
+
+			.subfeed {
+				overflow: hidden;
+			}
+
+			.subfeed-icon {
+				padding-right: 10px;
+			}
+
+			.subfeed-name {
+			    line-height: 12px;
+			    overflow: visible;
+			}
+
+			.feed-icon, .feed-name, .subfeed-icon, .subfeed-name {
+				display: inline-block;
+			}
+
+			.reddit {
+				background-color: #ff5700;
+				h1, .fa {
+					color: white;
+					margin-top: 0px;
+				}
+			}
+
+			.guardian {
+				background-color: #005689;
+
+				.guardian-white {
+					color: white;
+				}
+
+				.guardian-blue {
+					color: rgb(170, 220, 230);
+				}
+			}
+		}
+
+	}
+}
+
