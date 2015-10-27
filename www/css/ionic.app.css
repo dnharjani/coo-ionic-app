@@ -9088,7 +9088,8 @@ a.button {
 
 #coo-app #articles-container .article .article-title {
   overflow: visible;
-  white-space: normal; }
+  white-space: normal;
+  font-size: 24px; }
 
 #coo-app #articles-container .article .article-author {
   text-align: right; }
