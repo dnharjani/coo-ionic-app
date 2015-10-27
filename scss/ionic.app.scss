@@ -30,6 +30,20 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 		}
 	}
 
+	//articles 
+
+	#articles-container {
+		.article {
+			.article-title {
+				overflow: visible;
+				white-space: normal;
+			}
+
+			.article-author {
+				text-align: right;
+			}
+		}
+	}
 
 	// feeds
 	#feeds-container {

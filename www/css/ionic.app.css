@@ -9086,6 +9086,13 @@ a.button {
   height: 100%;
   margin: auto; }
 
+#coo-app #articles-container .article .article-title {
+  overflow: visible;
+  white-space: normal; }
+
+#coo-app #articles-container .article .article-author {
+  text-align: right; }
+
 #coo-app #feeds-container .feed .subfeed {
   height: 0;
   transition: height 0.3s ease-in; }

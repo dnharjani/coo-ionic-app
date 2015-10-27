@@ -32,6 +32,15 @@ angular.module('coo', ['ionic'])
         }
       }
   })
+  .state('app.articles.article', {
+      url: '/article/:articleId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/article.html',
+          controller: 'ArticleController'
+        }
+      }
+  })
   .state('app.feeds', {
       url: '/feeds',
       views: {

@@ -1,6 +1,13 @@
 angular.module('coo')
-    .service('ApiService', function (ApplicationConfigService) {
-    	this.apiUrl = ApplicationConfigService.get('apiUrl');
+    .service('ApiService', function (ApplicationConfigService, $http) {
+    	var apiUrl = ApplicationConfigService.get('apiUrl');
 
-       	return {};
+    	function getJSONForFeed(feed) {
+    		return $http.get('/json/wwwredditcomrworldnews.json');
+    	}
+
+
+       	return {
+       		getJSONForFeed: getJSONForFeed
+       	};
     });
