@@ -1,8 +1,8 @@
-<ion-view view-title="{{ article.title }}">
+<ion-view view-title="{{article.title}}" ng-controller="ArticleController">
   <ion-content id="articles-container">
-	  <div class="item item-body">
-	    <img ng-if="internetConnectionService.isConnected()" class="full-image" ng-src="{{article.images[0].url}}">
-	    <p ng-bind-html="article.content"></p>
+	  <div class="item item-body article">
+	    <img class="full-image article-image" ng-src="{{article.images[0].url}}">
+	    <div class="article-content" ng-bind-html="article.content"></div>
 	  </div>
 
 	  <div class="item tabs tabs-secondary tabs-icon-left">

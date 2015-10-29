@@ -1,9 +1,10 @@
 angular.module('coo')
-.controller('ArticlesController', function($scope, InternetConnectionService, ApiService) {
+.controller('ArticlesController', function($scope, InternetConnectionService, ArticleService) {
 	$scope.internetConnectionService = InternetConnectionService;
+	$scope.articles = [];
 
-	ApiService.getJSONForFeed('').then(function(articleData){
-		$scope.articles = articleData.data.articles;
+	ArticleService.getArticles().then(function(articles){
+		$scope.articles = articles;
 	});
 
 	

@@ -34,14 +34,56 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 	#articles-container {
 		.article {
-			.article-title {
-				overflow: visible;
-				white-space: normal;
-				font-size: 24px;
+			.article-title-container {
+				cursor: pointer;
+				position: relative;
+				display: block;
+
+				&:hover .icon{
+					background-color: $royal;
+				}
+				
+				.article-title {
+					overflow: visible;
+					white-space: normal;
+					font-size: 20px;
+					display: inline-block;
+					padding-right: 32px;
+				}
+
+				.icon {
+					display: block;
+					position: absolute;
+					top: 50%;
+					margin-top: -15px;
+					right: 0;
+					height: 30px;
+					width: 30px;
+					border-radius: 100px;
+					background-color: $balanced;
+					text-align: center;
+					line-height: 30px;
+					color: white;
+				}
 			}
 
 			.article-author {
 				text-align: right;
+				margin-top: 10px;
+				font-size: 14px;
+			}
+
+			.article-description {
+				font-size: 14px;
+				max-height: 100px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
+			.article-content {
+				img {
+					max-width: 100%;
+				}
 			}
 		}
 	}

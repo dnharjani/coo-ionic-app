@@ -9086,13 +9086,45 @@ a.button {
   height: 100%;
   margin: auto; }
 
-#coo-app #articles-container .article .article-title {
-  overflow: visible;
-  white-space: normal;
-  font-size: 24px; }
+#coo-app #articles-container .article .article-title-container {
+  cursor: pointer;
+  position: relative;
+  display: block; }
+  #coo-app #articles-container .article .article-title-container:hover .icon {
+    background-color: #886aea; }
+  #coo-app #articles-container .article .article-title-container .article-title {
+    overflow: visible;
+    white-space: normal;
+    font-size: 20px;
+    display: inline-block;
+    padding-right: 32px; }
+  #coo-app #articles-container .article .article-title-container .icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    background-color: #33cd5f;
+    text-align: center;
+    line-height: 30px;
+    color: white; }
 
 #coo-app #articles-container .article .article-author {
-  text-align: right; }
+  text-align: right;
+  margin-top: 10px;
+  font-size: 14px; }
+
+#coo-app #articles-container .article .article-description {
+  font-size: 14px;
+  max-height: 100px;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+#coo-app #articles-container .article .article-content img {
+  max-width: 100%; }
 
 #coo-app #feeds-container .feed .subfeed {
   height: 0;

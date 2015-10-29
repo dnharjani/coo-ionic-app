@@ -6,7 +6,6 @@ angular.module('coo')
     		return $http.get('/json/wwwredditcomrworldnews.json');
     	}
 
-
        	return {
        		getJSONForFeed: getJSONForFeed
        	};

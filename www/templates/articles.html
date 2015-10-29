@@ -2,11 +2,15 @@
   <ion-content id="articles-container">
   	<div class="article list card" ng-repeat="article in articles">
 	  <div class="item">
-	  	<h1 class="article-title">{{ article.title }}</h1>
+	  	<a class="article-title-container" href="#/app/article/{{article.id}}">
+	  		<h1 class="article-title">{{ article.title }}</h1>
+	  		<i class="icon ion-chevron-right"></i>
+	  	</a>
+	  	
   	 	<h3 class="article-author" ng-if="article.authors[0] && article.authors[0].name"> by {{ article.authors[0].name }}</h3>
 	  </div>
 
-	  <div class="item item-body">
+	  <div class="article-description item item-body">
 	  	{{ article.description }}...
 	  </div>
 

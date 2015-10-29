@@ -1,4 +1,7 @@
-angular.module('coo', ['ionic'])
+angular.module('coo', 
+  ['ionic', 
+  'angular-md5'
+  ])
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -32,12 +35,11 @@ angular.module('coo', ['ionic'])
         }
       }
   })
-  .state('app.articles.article', {
+  .state('app.article', {
       url: '/article/:articleId',
       views: {
         'menuContent': {
-          templateUrl: 'templates/article.html',
-          controller: 'ArticleController'
+          templateUrl: 'templates/article.html'
         }
       }
   })
